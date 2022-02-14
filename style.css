@@ -14,7 +14,6 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: solid black 2px;
     background-color: transparent;
     height: 240px;
     width: 180px;

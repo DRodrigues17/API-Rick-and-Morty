@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>API Rick and Morty </title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -28,24 +29,3 @@
 </body>
 
 </html>
-<script>
-    function buscarPersonagem() {
-        const idPersonagem = document.getElementById("id_personagem").value
-
-        $.ajax({
-            url: "https://rickandmortyapi.com/api/character/" + idPersonagem,
-            type: "get",
-            success: function (result) {
-                document.getElementById("imagem_personagem").src = result.image
-
-                const textoResultado = `
-            <ul>
-                <li>${result.name}</li>
-                <li>${result.status}</li>
-            </ul>
-            `
-                document.getElementById("resultado").innerHTML = textoResultado
-            }
-        });
-    }
-</script>
